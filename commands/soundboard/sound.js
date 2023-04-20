@@ -27,8 +27,6 @@ module.exports = {
     },
 
     async execute(interaction) {
-        /* const option = interaction.options.getString('son');
-        await interaction.reply({content: `Vous avez choisi : "${option}"`}) */
 
         let nameSong = await interaction.options.getString("son");
 
@@ -36,13 +34,11 @@ module.exports = {
         
         const player = createAudioPlayer();
         const resource = createAudioResource(`./sounds/${nameSong}.mp3`);
-        console.log(`./sounds/${nameSong}.mp3`)
+
         const connection = joinVoiceChannel({channelId: channel.id, guildId: interaction.guild.id, adapterCreator: interaction.guild.voiceAdapterCreator});
         
         player.play(resource);
         connection.subscribe(player);
-
-        /* interaction.reply('je suis connecté'); */
 
         const btnSong = new ButtonBuilder()
             .setCustomId(nameSong)
@@ -55,12 +51,12 @@ module.exports = {
             components: [row]
         })
 
-        const collector = interaction.createMessageComponentCollector();
+        /* const collector = interaction.createMessageComponentCollector();
 
         collector.on('collect', async i => {
             player.play(resource);
             connection.subscribe(player);
-        })
+        }) */
     }
 };
 

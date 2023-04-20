@@ -3,7 +3,7 @@ const { createAudioResource, joinVoiceChannel, createAudioPlayer } = require('@d
 const fs = require('fs')
 const path = require('path')
 
-const effectTab = [];
+/* const effectTab = [];
 
 const soundsPath = path.join(__dirname, "../sounds");
 const soundsFiles = fs.readdirSync(soundsPath).filter((file) => file.endsWith(".mp3"));
@@ -16,7 +16,7 @@ for (const file of soundsFiles) {
     // const filePath = path.join(soundsPath, file);
     // const sound = require(filePath);
     // commands.push(effectTab.data.toJSON());
-}
+} */
 
         
 module.exports = {
@@ -25,6 +25,6 @@ module.exports = {
     .setDescription("Affiche tout les sounds effects"),
 
     async execute(interaction) {
-        
+        interaction.reply("caca")
     }
 }

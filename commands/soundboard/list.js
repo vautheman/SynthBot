@@ -10,7 +10,7 @@ module.exports = {
 
         //const effectTab = [];
 
-        const soundsPath = path.join(__dirname, "../sounds");
+        const soundsPath = path.join(__dirname, "../../sounds");
         const soundsFiles = fs.readdirSync(soundsPath).filter((file) => file.endsWith(".mp3"));
 
         const soundListing = new EmbedBuilder()

@@ -48,7 +48,5 @@ module.exports = {
 			await interaction.deferReply({ ephemeral: true });
 			await interaction.deleteReply();
 		}
-
-
     }
 };
