@@ -22,6 +22,8 @@ module.exports = {
     
             interaction.reply({ embeds: [embed] });
 
+            await interaction.client.distube.voices.leave(interaction.guild);
+
         } catch (e) {
             console.error(e)
         }
