@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 require('dotenv').config();
 
+require("./deploy-commands")
+
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildMessages]
 });
