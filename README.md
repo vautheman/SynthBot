@@ -37,7 +37,7 @@ Créer un fichier `.env` et remplissez les valeurs suivantes :
 
 ## 🐬 Docker Configuration
 
-Pour ceux qui préfèrent utiliser un container Docker, éditez le fichier `Dockerfile`.
+Pour ceux qui préfèrent utiliser un container Docker, copiez/collez le fichier `Dockerfile_exemple` et renommez le par `Dockerfile`. Modifiez ensuite les variables d'environnement par les votres.
 
 ```shell
 FROM node:18.16
