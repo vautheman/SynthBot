@@ -47,6 +47,12 @@ module.exports = {
 
 			await interaction.deferReply({ ephemeral: true });
 			await interaction.deleteReply();
+
+            player.addListener("stateChange", (oldOne, newOne) => {
+                if (newOne.status == "idle") {
+                    connection.destroy()
+                }
+            });
 		}
     }
 };

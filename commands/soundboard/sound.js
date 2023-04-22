@@ -51,12 +51,11 @@ module.exports = {
             components: [row]
         })
 
-        /* const collector = interaction.createMessageComponentCollector();
-
-        collector.on('collect', async i => {
-            player.play(resource);
-            connection.subscribe(player);
-        }) */
+        player.addListener("stateChange", (oldOne, newOne) => {
+            if (newOne.status == "idle") {
+                connection.destroy()
+            }
+        });
     }
 };
 

@@ -75,7 +75,6 @@ const status = queue =>
     queue.repeatMode ? (queue.repeatMode === 2 ? 'All Queue' : 'This Song') : 'Off'
   }\` | Autoplay: \`${queue.autoplay ? 'On' : 'Off'}\``
 
-
 client.distube
   .on('playSong', (queue, song) => {
     const embed = new EmbedBuilder()
