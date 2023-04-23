@@ -44,17 +44,6 @@ for (const folder of commandFolders) {
     }
 }
 
-/* SOUNDS COLLECTION */
-
-client.sounds = new Collection()
-
-const soundsPath = path.join(__dirname, "sounds");
-const soundsFiles = fs.readdirSync(soundsPath).filter((file) => file.endsWith(".mp3"));
-
-for (const file of soundsFiles) {
-    client.sounds.set(path.parse(file).name, file)
-}
-
 /*  EVENTS  */
 
 const eventsPath = path.join(__dirname, 'events');
