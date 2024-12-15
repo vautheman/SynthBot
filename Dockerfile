@@ -7,5 +7,6 @@ COPY . /usr/src/fabulous
 
 ENV TOKEN=$DISCORD_TOKEN
 ENV LOCALE=$LOCALE_LANG
+ENV clientId=$CLIENT_ID
 
 CMD ["npm", "run", "start"]
