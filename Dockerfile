@@ -1,4 +1,4 @@
-FROM node:18.16-buster
+FROM node:18.16
 RUN mkdir /usr/src/fabulous
 WORKDIR /usr/src/fabulous
 COPY package*.json /usr/src/fabulous
